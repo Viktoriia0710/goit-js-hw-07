@@ -1,4 +1,5 @@
-const ingredients = [
+const ingredients =
+[
   'Картошка',
   'Грибы',
   'Чеснок',
@@ -6,12 +7,20 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-const newEl = document.createElement('li');
-console.log(newEl);
-newEl.textContent =
-  'Картошка',
-  'Грибы',
-  'Чеснок',
-  'Помидоры',
-  'Зелень',
-  'Приправы',''
+
+const arrayEl = document.querySelector('ingredients');
+
+const elements = ingredients.map(item => {
+  const liEl = document.createElement('li');
+  liEl.textContent = item;
+  return liEl;
+});
+
+arrayEl.append(...elements);
+
+// console.log(elements);
+
+
+
+ 
+
